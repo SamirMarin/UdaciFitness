@@ -13,7 +13,7 @@ export default class App extends React.Component {
   render() {
     return (
       <Provider store={this.store}>
-        <View style={{backgroundColor: 'red' }}>
+        <View style={{flex: 1 }}>
           <AddEntry />
         </View>
       </Provider>
