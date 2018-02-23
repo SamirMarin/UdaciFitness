@@ -3,7 +3,7 @@ import { View, Text, ActivityIndicator, TouchableOpacity, StyleSheet, Animated }
 import { Foundation } from '@expo/vector-icons'
 import { purple, white } from '../utils/colors'
 import { Location, Permissions } from 'expo'
-import { CalculateDirection } from '../utils/helpers'
+import { calculateDirection } from '../utils/helpers'
 
 export default class Live extends Component {
   state = {
@@ -44,7 +44,7 @@ export default class Live extends Component {
       timeInterval: 1,
       distanceInterval: 1,
     }, ({ coords }) => {
-      const newDirection = 'North fake'//calculateDirection(coords.heading)
+      const newDirection = calculateDirection(coords.heading)
       const { direction, bounceValue } = this.state
 
       if (newDirection !== direction){
